@@ -10,14 +10,17 @@ function Post() {
       .then((data) => setPosts(data));
   }, []);
 
-
-  return (<div>
-    <ul>
-    {posts.map((post) => (
-      <Link to={`${post.id}`} key={post.id}><li>{post.title}</li></Link>
-    ))}
-</ul>
-  </div>);
+  return (
+    <div>
+      <ul>
+        {posts.map((post) => (
+          <Link to={`${post.id}`} key={post.id}>
+            <li>{post.title}</li>
+          </Link>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default Post;

@@ -1,5 +1,16 @@
+import { Link, Route, Routes, useLocation } from "react-router-dom";
+
 function About() {
-  return <div>About</div>;
+  console.log(useLocation());
+  return (
+    <>
+      <h2>About</h2>
+      <Link to="info">Info</Link>
+      <Routes>
+        <Route path="info" element={<p>Our Info</p>} />
+      </Routes>
+    </>
+  );
 }
 
 export default About;
