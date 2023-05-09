@@ -1,7 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import Post from "./pages/Post";
-import PostDetails from "./pages/PostDetails";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -26,7 +23,7 @@ function Navbar() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="home">
-                  Home 
+                  Home
                 </Link>
               </li>
               <li className="nav-item">
@@ -44,17 +41,15 @@ function Navbar() {
                   Edit Post
                 </a>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="about">
+                  About
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-         
-      <Routes>
-        <Route path="/" element={<Home />} />  
-        <Route path="home" element={<Home />} />
-        <Route path="post" element={<Post />} />
-        <Route path="post/:id" element={<PostDetails />}/>
-      </Routes>
     </>
   );
 }
